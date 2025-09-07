@@ -1,4 +1,4 @@
-8<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -664,8 +664,6 @@
             color: var(--text-gray);
         }
 
-
-        
         /* 用户画像 - 可爱档案卡片 */
         .user-profiles {
             padding: 6rem 0;
@@ -819,6 +817,299 @@
             padding: 1rem;
             border-radius: 10px;
             margin-left: 0;
+        }
+        
+        /* 终端展示区域 - 保持原有深色主题 */
+        .terminal-showcase {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #F0F8FF 0%, #FFF5F8 50%, #F5FFFA 100%);
+        }
+        
+        .terminal-showcase .section-title {
+            margin-bottom: 3rem;
+        }
+        
+        .terminal-showcase .section-title h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: var(--gradient-rainbow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .terminal-showcase .section-title p {
+            color: var(--text-gray);
+            max-width: 42rem;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 1.7;
+        }
+        
+        /* 终端容器 - 添加可爱的包装 */
+        .terminal-wrapper {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 2px solid var(--glass-border);
+            border-radius: 25px;
+            padding: 2rem;
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /*.terminal-wrapper:before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: var(--gradient-rainbow);
+            border-radius: 30px;
+            z-index: -1;
+            opacity: 0.1;
+        }*/
+        
+        /* 终端样式 - 保持原有设计 */
+        .terminal {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #0d1117;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            border: 1px solid #30363d;
+            font-family: 'Fira Code', 'Courier New', monospace;
+        }
+        
+        .terminal-header {
+            background: #161b22;
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #30363d;
+        }
+        
+        .terminal-controls {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .control-btn {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .control-btn:hover {
+            transform: scale(1.2);
+        }
+        
+        .close { background: #f85149; }
+        .minimize { background: #e3b341; }
+        .maximize { background: #3fb950; }
+        
+        .terminal-title {
+            font-size: 13px;
+            color: #8b949e;
+            letter-spacing: 0.5px;
+            flex-grow: 1;
+            text-align: center;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .reload-btn {
+            background: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 4px;
+            padding: 5px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 28px;
+        }
+        
+        .reload-btn:hover {
+            background: #58a6ff;
+        }
+        
+        .reload-btn:hover svg {
+            stroke: #0d1117;
+        }
+        
+        .reload-icon {
+            width: 16px;
+            height: 16px;
+            stroke: #58a6ff;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: all 0.2s;
+        }
+        
+        .terminal-body {
+            padding: 15px;
+            min-height: 400px;
+            overflow-y: auto;
+            max-height: 70vh;
+            font-size: 14px;
+            line-height: 1.5;
+            white-space: pre;
+            overflow-x: auto;
+            background: #0d1117;
+            color: #c9d1d9;
+        }
+        
+        .output-line {
+            display: block;
+            margin-bottom: 2px;
+            white-space: pre;
+        }
+        
+        .command-line {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2px;
+        }
+        
+        .command-prefix {
+            color: #58a6ff;
+            margin-right: 5px;
+        }
+        
+        .timestamp {
+            color: #6e7681;
+        }
+        
+        .level-I {
+            color: #58a6ff;
+        }
+        
+        .level-S {
+            color: #3fb950;
+        }
+        
+        .level-W {
+            color: #e3b341;
+        }
+        
+        .level-E {
+            color: #f85149;
+        }
+        
+        .level-D {
+            color: #8b949e;
+        }
+        
+        .module-app {
+            color: #a371f7;
+        }
+        
+        .module-loader {
+            color: #ff7b72;
+        }
+        
+        .module-server {
+            color: #58a6ff;
+        }
+        
+        .module-console {
+            color: #3fb950;
+        }
+        
+        .module-model {
+            color: #e3b341;
+        }
+        
+        .module-tool {
+            color: #ffa657;
+        }
+        
+        .module-resource {
+            color: #8b949e;
+        }
+        
+        .module-world {
+            color: #a371f7;
+        }
+        
+        .module-sticker {
+            color: #ff7b72;
+        }
+        
+        .module-memory {
+            color: #58a6ff;
+        }
+        
+        .module-prompt {
+            color: #e3b341;
+        }
+        
+        .module-yesimbot {
+            color: #3fb950;
+        }
+        
+        .message-content {
+            color: #c9d1d9;
+        }
+        
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 16px;
+            background: #58a6ff;
+            margin-left: 2px;
+            vertical-align: middle;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        .footer {
+            padding: 10px 15px;
+            background: #161b22;
+            border-top: 1px solid #30363d;
+            color: #8b949e;
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #3fb950;
+            animation: pulse-dot 2s infinite;
+        }
+        
+        @keyframes pulse-dot {
+            0% { opacity: 0.7; }
+            50% { opacity: 1; }
+            100% { opacity: 0.7; }
         }
         
         /* 技术栈展示 - 可爱图标网格 */
@@ -1093,6 +1384,10 @@
             .chat-bubble {
                 max-width: 20rem;
             }
+            
+            .terminal-wrapper {
+                padding: 1rem;
+            }
         }
         
         @media (max-width: 640px) {
@@ -1145,6 +1440,7 @@
                     <li><a href="#features">魔法功能</a></li>
                     <li><a href="#memory">记忆魔法</a></li>
                     <li><a href="#profiles">萌友档案</a></li>
+                    <li><a href="#terminal">启动日志</a></li>
                     <li><a href="#tech">魔法城堡</a></li>
                     <li><a href="#cta" class="btn">领养萌友</a></li>
                 </ul>
@@ -1407,6 +1703,52 @@
         </div>
     </section>
 
+    <!-- 终端展示区域 -->
+    <section class="terminal-showcase" id="terminal">
+        <div class="container">
+            <div class="section-title">
+                <h2>YesImBot 的"魔法启动"！</h2>
+                <p>想看看 YesImBot 是怎么苏醒的吗？这里是它的启动日志，记录着每一个魔法模块的初始化过程！</p>
+            </div>
+            <div class="deprecated-terminal-wrapper">
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-controls">
+                            <div class="control-btn close" id="closeBtn"></div>
+                            <div class="control-btn minimize" id="minimizeBtn"></div>
+                            <div class="control-btn maximize" id="maximizeBtn"></div>
+                        </div>
+                        <div class="terminal-title">Koishi 启动日志</div>
+                        <div class="controls">
+                            <button class="reload-btn" id="reloadBtn" title="重载日志">
+                                <svg class="reload-icon" viewBox="0 0 24 24">
+                                    <path d="M23 4v6h-6M1 20v-6h6"></path>
+                                    <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="terminal-body" id="terminal-output">
+                        <div class="command-line">
+                            <span class="command-prefix">❯</span>
+                            <span class="command-text">yarn start</span>
+                            <span class="cursor" id="initialCursor"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="footer">
+                        <div class="timestamp" id="currentTime">2025-09-07 20:45:08</div>
+                        <div class="status-indicator">
+                            <div class="status-dot"></div>
+                            <span>运行中</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- 技术栈展示 -->
     <section class="tech-stack" id="tech">
         <div class="container">
@@ -1446,8 +1788,8 @@
             <h2>开启心动体验：和 YesImBot 一起，创造更多美好！</h2>
             <p>是不是已经迫不及待想拥有你的专属 YesImBot 萌友了呢？快来加入我们吧！数千个QQ群组的伙伴们都在和 YesImBot 一起创造着充满爱与惊喜的日常！</p>
             <div class="cta-btns">
-                <a href="https://github.com/yeswearebot/yesimbot" class="btn">立即领养你的AI萌友！ <i class="fas fa-download"></i></a>
-                <a href="https://docs.yesimbot.chat" class="btn btn-cream">萌友养成手册（用户文档）</a>
+                <a href="https://github.com/yeswearebot/yesimbot" class="btn">立即领养你的AI萌友！ <i class="fas fa-heart"></i></a>
+                <a href="https://docs.yesimbot.chat" class="btn btn-outline">查看详细文档</a>
             </div>
         </div>
     </section>
@@ -1457,47 +1799,56 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>YesImBot 的温馨小角落</h3>
-                    <p>打造逼近真实的AI网友，让每一次互动都充满爱与惊喜！</p>
+                    <h3>关于 YesImBot</h3>
+                    <p>YesImBot 是一个充满爱与智慧的 Koishi 插件，致力于为每个用户创造独特而温暖的AI伙伴体验。</p>
                     <div class="social-links">
-                        <a href="https://github.com/yeswearebot/yesimbot"><i class="fab fa-github"></i></a>
-                        <a href="https://qm.qq.com/q/857518324"><i class="fab fa-qq"></i></a>
-                        <a href="https://yesimbot-prompt-tester.streamlit.app/"><i class="fas fa-magic"></i></a>
+                        <a href="https://github.com/yeswearebot/yesimbot" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" title="QQ群">
+                            <i class="fab fa-qq"></i>
+                        </a>
+                        <a href="#" title="微信">
+                            <i class="fab fa-weixin"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="footer-column">
-                    <h3>资源小站</h3>
+                    <h3>快速链接</h3>
                     <ul class="footer-links">
-                        <li><a href="https://docs.yesimbot.chat"><i class="fas fa-book"></i> YesImBot 百科全书</a></li>
-                        <li><a href="https://github.com/yeswearebot/yesimbot"><i class="fas fa-code"></i> 魔法代码仓库</a></li>
-                        <li><a href="https://yesimbot-prompt-tester.streamlit.app/"><i class="fas fa-wand-magic-sparkles"></i> 魔法咒语优化器</a></li>
+                        <li><a href="https://docs.yesimbot.chat"><i class="fas fa-book"></i>使用文档</a></li>
+                        <li><a href="https://github.com/yeswearebot/yesimbot"><i class="fas fa-code"></i>源代码</a></li>
+                        <li><a href="#"><i class="fas fa-bug"></i>问题反馈</a></li>
+                        <li><a href="#"><i class="fas fa-heart"></i>赞助支持</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>社区小园</h3>
+                    <h3>社区支持</h3>
                     <ul class="footer-links">
-                        <li><a href="https://github.com/yeswearebot/yesimbot"><i class="fab fa-github"></i> 魔法世界创造者</a></li>
-                        <li><a href="https://qm.qq.com/q/857518324"><i class="fab fa-qq"></i> QQ萌友大家庭 (857518324)</a></li>
-                        <li><a href="https://yesimbot-prompt-tester.streamlit.app/"><i class="fas fa-comments"></i> 魔法咒语交流</a></li>
+                        <li><a href="#"><i class="fas fa-users"></i>用户社区</a></li>
+                        <li><a href="#"><i class="fas fa-question-circle"></i>常见问题</a></li>
+                        <li><a href="#"><i class="fas fa-graduation-cap"></i>使用教程</a></li>
+                        <li><a href="#"><i class="fas fa-envelope"></i>联系我们</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>帮助小站</h3>
+                    <h3>更新日志</h3>
                     <ul class="footer-links">
-                        <li><a href="https://qm.qq.com/q/857518324"><i class="fab fa-qq"></i> 加入萌友大家庭</a></li>
-                        <li><a href="https://github.com/yeswearebot/yesimbot/issues"><i class="fas fa-heart"></i> 告诉 YesImBot 小建议</a></li>
-                        <li><a href="https://docs.yesimbot.chat/contact"><i class="fas fa-envelope"></i> 和 YesImBot 聊聊天</a></li>
+                        <li><a href="#"><i class="fas fa-star"></i>最新版本</a></li>
+                        <li><a href="#"><i class="fas fa-history"></i>版本历史</a></li>
+                        <li><a href="#"><i class="fas fa-road"></i>开发路线</a></li>
+                        <li><a href="#"><i class="fas fa-gift"></i>新功能预览</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>© 2025 YesImBot 项目组 | 基于 Koishi 构建 | 打造真正的人类级AI交互体验 💖</p>
+                <p>&copy; 2025 YesImBot. 用爱与技术，创造更美好的AI伙伴体验。</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // 粒子背景配置 - 浅色系可爱风格
+        // 粒子背景初始化
         particlesJS('particles-js', {
             particles: {
                 number: { value: 80, density: { enable: true, value_area: 800 } },
@@ -1616,6 +1967,212 @@
                 setTimeout(() => {
                     this.style.transform = 'scale(1) rotate(0deg)';
                 }, 200);
+            });
+        });
+
+        // 终端功能 - 完整保留原有功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const output = document.getElementById('terminal-output');
+            const reloadBtn = document.getElementById('reloadBtn');
+            const currentTimeEl = document.getElementById('currentTime');
+            const closeBtn = document.getElementById('closeBtn');
+            const minimizeBtn = document.getElementById('minimizeBtn');
+            const maximizeBtn = document.getElementById('maximizeBtn');
+            const initialCursor = document.getElementById('initialCursor');
+            
+            // 设置当前时间
+            function updateCurrentTime() {
+                const now = new Date();
+                const year = now.getFullYear();
+                const month = String(now.getMonth() + 1).padStart(2, '0');
+                const day = String(now.getDate()).padStart(2, '0');
+                const hours = String(now.getHours()).padStart(2, '0');
+                const minutes = String(now.getMinutes()).padStart(2, '0');
+                const seconds = String(now.getSeconds()).padStart(2, '0');
+                
+                currentTimeEl.textContent = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+            }
+            
+            // 初始更新时间
+            updateCurrentTime();
+            setInterval(updateCurrentTime, 1000);
+            
+            // 控制按钮功能
+            closeBtn.addEventListener('click', function() {
+                document.querySelector('.terminal').innerHTML = '<div style="display:flex;justify-content:center;align-items:center;height:200px;color:#c9d1d9;font-family:monospace">终端已关闭</div>';
+            });
+            
+            minimizeBtn.addEventListener('click', function() {
+                alert('终端已最小化');
+            });
+            
+            maximizeBtn.addEventListener('click', function() {
+                const terminal = document.querySelector('.terminal');
+                if (terminal.style.width === '100%') {
+                    terminal.style.width = '';
+                    terminal.style.maxWidth = '1000px';
+                } else {
+                    terminal.style.width = '100%';
+                    terminal.style.maxWidth = 'none';
+                }
+            });
+            
+            // 日志数据 - 完整保留原有日志
+            const logData = [
+                { time: "2025-09-07 20:45:08", level: "I", message: "app Koishi/4.18.8" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin group:entry" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin group:server" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin server:0vluo4" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin group:basic" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin commands:mz8uj8" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin help:iy6pw2" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin http:gyte4c" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin inspect:dzwop7" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin locales:3g0whr" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin rate-limit:mojbfm" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin telemetry:014lcg" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin group:console" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin actions:qbh6z4" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin analytics:2l4juv" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin config:dqhjs9" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin console:fpytf6" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin dataview:8rawbo" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin explorer:qwxp4s" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin logger:srt4gw" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin insight:6s3cg7" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin market:rv4oqz" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin notifier:ludp5r" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin oobe:q09lqw" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin sandbox:4w4bn2" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin status:j1wqfo" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin theme-vanilla:gzdiu6" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin group:storage" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin database-sqlite:0f35kp" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin assets-local:hc2afl" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin group:adapter" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin adapter-onebot:zqidq9" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "loader apply plugin yesimbot:b1ob678" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "server server listening at http://0.0.0.0:5141" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "console webui is available at http://127.0.0.1:5141" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "[模型服务] --- 开始初始化模型提供商 ---" },
+                { time: "2025-09-07 20:45:08", level: "S", message: "[模型服务] ✅ 初始化成功 | 提供商: Yunwu (OpenAI) | 共 2 个模型" },
+                { time: "2025-09-07 20:45:08", level: "S", message: "[模型服务] ✅ 初始化成功 | 提供商: SiliconFlow (Silicon Flow) | 共 1 个模型" },
+                { time: "2025-09-07 20:45:08", level: "S", message: "[模型服务] ✅ 初始化成功 | 提供商: GPTGod (OpenAI) | 共 2 个模型" },
+                { time: "2025-09-07 20:45:08", level: "S", message: "[模型服务] ✅ 初始化成功 | 提供商: MyServer (OpenAI) | 共 1 个模型" },
+                { time: "2025-09-07 20:45:08", level: "S", message: "[模型服务] ✅ 初始化成功 | 提供商: Deepseek (DeepSeek) | 共 1 个模型" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "[模型服务] --- 模型提供商初始化完成 ---" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "[工具管理器] 正在注册扩展: \"表情包管理\"" },
+                { time: "2025-09-07 20:45:08", level: "D", message: "[工具管理器]   -> 注册工具: \"steal_sticker\"" },
+                { time: "2025-09-07 20:45:08", level: "D", message: "[工具管理器]   -> 注册工具: \"send_sticker\"" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "[工具管理器] 正在注册扩展: \"核心工具集\"" },
+                { time: "2025-09-07 20:45:08", level: "D", message: "[工具管理器]   -> 注册工具: \"send_message\"" },
+                { time: "2025-09-07 20:45:08", level: "D", message: "[工具管理器]   -> 注册工具: \"get_image_description\"" },
+                { time: "2025-09-07 20:45:08", level: "W", message: "search 配置要求使用Puppeteer，但Puppeteer服务未安装。请安装puppeteer插件。" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "[工具管理器] 正在注册扩展: \"网络搜索\"" },
+                { time: "2025-09-07 20:45:08", level: "D", message: "[工具管理器]   -> 注册工具: \"fetch_webpage\"" },
+                { time: "2025-09-07 20:45:08", level: "D", message: "[工具管理器]   -> 注册工具: \"web_search\"" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "[工具管理器] 正在注册扩展: \"群内交互\"" },
+                { time: "2025-09-07 20:45:08", level: "D", message: "[工具管理器]   -> 注册工具: \"reaction_create\"" },
+                { time: "2025-09-07 20:45:08", level: "D", message: "[工具管理器]   -> 注册工具: \"essence_create\"" },
+                { time: "2025-09-07 20:45:08", level: "D", message: "[工具管理器]   -> 注册工具: \"essence_delete\"" },
+                { time: "2025-09-07 20:45:08", level: "D", message: "[工具管理器]   -> 注册工具: \"send_poke\"" },
+                { time: "2025-09-07 20:45:08", level: "D", message: "[工具管理器]   -> 注册工具: \"get_forward_msg\"" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "[世界状态] 正在从历史记录初始化机器人禁言状态..." },
+                { time: "2025-09-07 20:45:08", level: "I", message: "[世界状态] 机器人禁言状态初始化完成" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "[世界状态] 服务已启动" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "[表情管理] 表情存储目录已初始化: data/yesimbot/stickers" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "[表情管理] 表情管理服务已启动" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "[记忆系统] 正在初始化记忆存储..." },
+                { time: "2025-09-07 20:45:08", level: "S", message: "[记忆系统] ✅ 记忆存储初始化成功" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "[记忆系统] 正在加载用户画像..." },
+                { time: "2025-09-07 20:45:08", level: "S", message: "[记忆系统] ✅ 已加载 42 个用户画像" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "[记忆系统] 记忆系统启动完成" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "[提示词管理] 正在加载提示词模板..." },
+                { time: "2025-09-07 20:45:08", level: "S", message: "[提示词管理] ✅ 已加载 8 个提示词模板" },
+                { time: "2025-09-07 20:45:08", level: "I", message: "[提示词管理] 提示词管理服务已启动" },
+                { time: "2025-09-07 20:45:09", level: "I", message: "yesimbot 所有服务已就绪" },
+                { time: "2025-09-07 20:45:09", level: "I", message: "yesimbot Version: 3.0.0-canary.20250812163949" }
+            ];
+            
+            // 添加日志行
+            function addOutputLine(log) {
+                const line = document.createElement('div');
+                line.className = 'output-line';
+                
+                const timestamp = document.createElement('span');
+                timestamp.className = 'timestamp';
+                timestamp.textContent = log.time;
+                
+                const level = document.createElement('span');
+                level.className = `level-${log.level}`;
+                level.textContent = ` ${log.level} `;
+                
+                const message = document.createElement('span');
+                message.className = 'message-content';
+                message.textContent = log.message;
+                
+                line.appendChild(timestamp);
+                line.appendChild(level);
+                line.appendChild(message);
+                
+                output.appendChild(line);
+                output.scrollTop = output.scrollHeight;
+            }
+            
+            // 添加光标
+            function addCursor() {
+                const cursorLine = document.createElement('div');
+                cursorLine.className = 'command-line';
+                
+                const prefix = document.createElement('span');
+                prefix.className = 'command-prefix';
+                prefix.textContent = '❯';
+                
+                const cursor = document.createElement('span');
+                cursor.className = 'cursor';
+                
+                cursorLine.appendChild(prefix);
+                cursorLine.appendChild(cursor);
+                
+                output.appendChild(cursorLine);
+                output.scrollTop = output.scrollHeight;
+            }
+            
+            // 模拟日志输出
+            function simulateLogs() {
+                // 清空输出，保留初始命令行
+                output.innerHTML = '';
+                
+                const commandLine = document.createElement('div');
+                commandLine.className = 'command-line';
+                commandLine.innerHTML = '<span class="command-prefix">❯</span><span class="command-text">yarn start</span>';
+                output.appendChild(commandLine);
+                
+                let delay = 200; // 初始延迟
+                
+                logData.forEach(log => {
+                    setTimeout(() => {
+                        addOutputLine(log);
+                    }, delay);
+                    
+                    // 随机延迟，模拟真实时间间隔
+                    delay += Math.floor(Math.random() * 100) + 50;
+                });
+                
+                // 添加闪烁光标
+                setTimeout(() => {
+                    addCursor();
+                }, delay + 100);
+            }
+            
+            // 初始模拟
+            setTimeout(simulateLogs, 1000);
+            
+            // 重载按钮
+            reloadBtn.addEventListener('click', function() {
+                // 显示初始光标
+                initialCursor.style.display = 'inline-block';
+                simulateLogs();
             });
         });
     </script>
